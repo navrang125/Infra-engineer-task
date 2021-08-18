@@ -10,7 +10,9 @@ script:
   
   
 before_install:
-    - docker-compose build  navrang125/devops_task1
+    - docker login -u $DOCKER_ID -p $DOCKER_PASSWORD 
+    - docker-compose build
+    - docker tag service-1 navrang125/devops_task1
 
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
