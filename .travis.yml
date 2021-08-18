@@ -6,11 +6,10 @@ services:
 before_script: pip install docker-compose
 script:
   # although we have not added any tests scenario
-  - docker-compose run service-2 sh -c "pytest"
+  - docker-compose run service-1 sh -c "pytest"
   
   
 before_install:
-    - docker login -u $DOCKER_ID -p $DOCKER_PASSWORD 
     - docker-compose build
     - docker tag service-1 navrang125/devops_task1
 
