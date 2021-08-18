@@ -4,9 +4,9 @@ services:
     - docker
 
 before_install:
-    - docker build -t navrang125/devops_task1
+    - docker-compose build  navrang125/devops_task1
 
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    - docker push navrang125/devops_task1
+    - docker-compose push navrang125/devops_task1
