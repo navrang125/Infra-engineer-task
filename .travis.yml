@@ -1,4 +1,10 @@
-sudo: required
+language: python
+
+before_script: pip install docker-compose
+script:
+  # since there's a dependency on mongo, it will build that image also
+  # although we have not added any tests scenario
+  - docker-compose run service-2 sh -c "pytest"
 
 services:
     - docker
