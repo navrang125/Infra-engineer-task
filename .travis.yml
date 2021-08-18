@@ -3,12 +3,6 @@ sudo: required
 services:
     - docker
     
-before_script: pip install docker-compose
-script:
-  # although we have not added any tests scenario
-  - docker-compose run service-1 sh -c "pytest"
-  
-  
 before_install:
     - docker-compose build
    
