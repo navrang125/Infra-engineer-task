@@ -17,18 +17,11 @@
 			"memory": 200,
 			"cpu": 1,
 			"essential": true,
-			"environment": [
-
-				{
-					"name": "POSTGRES_PASSWORD",
+			"environment": [{
+                	"name": "POSTGRES_PASSWORD",
 					"value": "3x4mpl3"
-				}
-
-			],
-			"links": [
-				"postgres"
-			],
-
+				}],
+			"links": ["postgres"],
 			"portMappings": [{
 				"hostPort": 5432,
 				"containerPort": 5432
