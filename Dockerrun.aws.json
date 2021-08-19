@@ -4,8 +4,7 @@
 			"name": "api",
 			"image": "navrang125/infra-engineer-task_api:latest",
 			"essential": true,
-			"memory": 200,
-			"cpu": 1,
+			"memory": 128,
 			"portMappings": [{
 				"hostPort": 5000,
 				"containerPort": 9090
@@ -15,8 +14,7 @@
 			"name": "postgres",
 			"image": "postgres:alpine",
 			"essential": true,
-			"memory": 200,
-			"cpu": 1,
+			"memory": 256,
 			"portMappings": [{
 				"hostPort": 5432,
 				"containerPort": 5432
