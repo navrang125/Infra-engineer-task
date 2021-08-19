@@ -14,18 +14,20 @@
 		{
 			"name": "postgres",
 			"image": "postgres:alpine",
+			"essential": true,
 			"memory": 200,
 			"cpu": 1,
-			"essential": true,
-			"environment": [{
-                	"name": "POSTGRES_PASSWORD",
-					"value": "3x4mpl3"
-				}],
-			"links": ["postgres"],
 			"portMappings": [{
 				"hostPort": 5432,
 				"containerPort": 5432
+			}],
+			"links": ["postgres"],
+			"environment": [{
+				"name": "POSTGRES_PASSWORD",
+				"value": "3x4mpl3"
 			}]
+
+
 		}
 	]
 }
