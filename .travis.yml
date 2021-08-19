@@ -5,8 +5,20 @@ services:
     
 before_install:
     - docker-compose build
+    - docker tag infra-engineer-task_api navrang125/infra-engineer-task_api
    
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    - docker-compose push 
+    - docker push navrang125/infra-engineer-task_api:latest
+deploy:
+    provider: elasticbeanstalk
+    region: us-east-2
+    app: api
+    env: Api-env
+    bucket_name: elasticbeanstalk-us-east-2-104956403922
+    bucket_path: api
+    on:
+        branch: master
+    access_key_id: $AWS_ACCESS_KEY
+    secret_acces_key: $AWS_SECRET_KEY
