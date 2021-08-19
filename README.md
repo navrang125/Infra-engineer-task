@@ -79,6 +79,8 @@ Challenge tips:
 * `Jenkins` - As an extensible automation server, [Jenkins](https://hub.docker.com/r/jenkinsci/blueocean/) can be used as a simple CI server or turned into the continuous delivery hub for any project
 * `GitLab Community Edition (CE)` -  [Gitlab](https://github.com/sameersbn/docker-gitlab) is an open source end-to-end software development platform with built-in version control, issue tracking, code review, CI/CD, and more. Self-host GitLab CE on your own servers
 
+| Arch Principles | Hardware | Software |
+| --------------- | -------- | -------- |
 | Security | The custom Linux distribution _(Alpine based)_ has very small attach surface. Secondly, all ports on ELB are closed by default. Thirdly, no direct SSH access to worker nodes. The custom Linux distribution used by Docker for AWS is carefully developed and configured to run Docker well. Everything from the kernel configuration to the networking stack is customized to make it a favorable place to run Docker. | Only front-end services publish ports _(e.g. 80 or 443)_ via ELB |
 | Resiliency | The lifecycle of nodes is managed using auto-scaling groups, so that if a node enters an unhealthy state for unforeseen reasons, the node is taken out of load balancer rotation and/or replaced automatically and all of its container tasks are rescheduled | If a node is replaced, all of its container tasks are rescheduled automatically |
 | Monitoring | An option could be Elastic Stack (including Metricbeat on each node to ship system stats to Elasticsearch) |  An option could be Elastic Stack (including Metricbeat on each node to ship docker container stats to Elasticsearch) |
