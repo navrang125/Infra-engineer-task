@@ -9,4 +9,4 @@ before_install:
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
-    - docker-compose push navrang125/devops_task1
+    - docker-compose push 
