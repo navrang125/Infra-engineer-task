@@ -50,6 +50,7 @@ Challenge tips:
 # Changes made _(to the original code repository; .zip)
 - Added a .travis.yml file. So whenever there is change implemented on GitHub it will trigger job on Travis which will build image and push to Docker Hub therefater image will be deployed on AWS.
 - Added a Dokerrun.aws.json file. Describes how to deploy a remote Docker image as an Elastic Beanstalk application. This JSON file is specific to Elastic Beanstalk. If your application runs on an image that is available in a hosted repository, you can specify the image in a Dockerrun.
+- Edited docker file under api folder , failing to build image with error "go: go.mod file not found in current directory" so added added extra line "RUN go mod init" above "RUN go get -d -v -t ./..." which has fixed the issue.
 
 # Response
 - Install docker locally and successfully run api on port 5000 also performed test as mentioned and it passed.
@@ -70,7 +71,7 @@ Challenge tips:
 - It uses a file called Dockerrun.aws.json to start container which is received from github through travis.
 
 ## Challenge - Part 2
-![Delivery pipeline](./pics/BCGDV_Stack-Pipeline.png "Delivery pipeline")
+![Delivery pipeline](./pics/Continous Delivery.png "Delivery pipeline")
 
 * `Flow Proxy` - The goal of the [Docker Flow Proxy project](https://github.com/vfarcic/docker-flow-proxy) is to provide an easy way to reconfigure proxy every time a new service is deployed, or when a service is scaled. It does not try to "reinvent the wheel", but to leverage the existing leaders and combine them through an easy to use integration. It uses HAProxy as a proxy and adds custom logic that allows on-demand reconfiguration.
 * `Flow Swarm Listener` - The goal of the [Docker Flow Swarm Listener project](https://github.com/vfarcic/docker-flow-swarm-listener) is to listen to Docker Swarm events and send requests when a change occurs. At the moment, the only supported option is to send a notification when a new service is created, or an existing service was removed from the cluster.
