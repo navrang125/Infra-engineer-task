@@ -71,7 +71,7 @@ Challenge tips:
 - It uses a file called Dockerrun.aws.json to start container which is received from github through travis.
 
 ## Challenge - Part 2
-![Delivery pipeline](./pics/Continous Delivery.png "Delivery pipeline")
+![Continous Delivery](https://user-images.githubusercontent.com/63913243/130123276-fee82e43-f81e-4314-9464-4fe32f22b3b4.png)
 
 * `Flow Proxy` - The goal of the [Docker Flow Proxy project](https://github.com/vfarcic/docker-flow-proxy) is to provide an easy way to reconfigure proxy every time a new service is deployed, or when a service is scaled. It does not try to "reinvent the wheel", but to leverage the existing leaders and combine them through an easy to use integration. It uses HAProxy as a proxy and adds custom logic that allows on-demand reconfiguration.
 * `Flow Swarm Listener` - The goal of the [Docker Flow Swarm Listener project](https://github.com/vfarcic/docker-flow-swarm-listener) is to listen to Docker Swarm events and send requests when a change occurs. At the moment, the only supported option is to send a notification when a new service is created, or an existing service was removed from the cluster.
