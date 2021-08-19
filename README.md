@@ -50,7 +50,7 @@ Challenge tips:
 # Changes made _(to the original code repository; .zip)
 - Added a .travis.yml file. So whenever there is change implemented on GitHub it will trigger job on Travis which will build image and push to Docker Hub therefater image will be deployed on AWS.
 - Added a Dokerrun.aws.json file. Describes how to deploy a remote Docker image as an Elastic Beanstalk application. This JSON file is specific to Elastic Beanstalk. If your application runs on an image that is available in a hosted repository, you can specify the image in a Dockerrun.
-- Edited docker file under api folder , failing to build image with error "go: go.mod file not found in current directory" so added added extra line "RUN go mod init" above "RUN go get -d -v -t ./..." which has fixed the issue.
+- Edited docker file under api folder , failing to build image with error "go: go.mod file not found in current directory" so added an extra line "RUN go mod init" above "RUN go get -d -v -t ./..." which has fixed the issue.
 
 # Response
 - Install docker locally and successfully run api on port 5000 also performed test as mentioned and it passed.
