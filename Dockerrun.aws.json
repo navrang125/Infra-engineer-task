@@ -1,24 +1,16 @@
 {
-	"AWSEBDockerrunVersion": 1,
+	"AWSEBDockerrunVersion": 2,
 	"containerDefinitions": [{
 			"name": "api",
 			"image": "navrang125/infra-engineer-task_api:latest",
 			"essential": true,
-			"memory": 128,
-			"portMappings": [{
-				"hostPort": 9090,
-				"containerPort": 5000
-			}]
+			"memory": 512
 		},
 		{
 			"name": "postgres",
 			"image": "postgres:alpine",
 			"essential": true,
-			"memory": 128,
-			"portMappings": [{
-				"hostPort": 5432,
-				"containerPort": 5432
-			}],
+			"memory": 512,
 			"links": ["postgres"],
 			"environment": [{
 				"name": "POSTGRES_PASSWORD",
