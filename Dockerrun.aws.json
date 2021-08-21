@@ -21,8 +21,7 @@
            "Key": "mydockercfg"
          },
 		    "links": [
-			    "postgres",
-				"db"
+			    "postgres"				
 			],
 			"essential": true,
 			"name": "api",
