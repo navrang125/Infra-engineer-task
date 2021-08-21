@@ -13,10 +13,10 @@ after_success:
     - docker push navrang125/infra-engineer-task_api:latest
 deploy:
     provider: elasticbeanstalk
-    region: us-east-2
+    region: us-east-1
     app: api
     env: Api-env
-    bucket_name: elasticbeanstalk-us-east-2-104956403922
+    bucket_name: elasticbeanstalk-us-east-1-104956403922
     bucket_path: api
     on:
         branch: master
