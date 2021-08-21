@@ -5,10 +5,6 @@
 				"name": "POSTGRES_PASSWORD",
 				"value": "3x4mpl3"
 			}],
-			"links": [
-			    "postgres",
-				"db"
-			],
 			"essential": true,
 			"image": "postgres:alpine",
 			"memory": 100,
@@ -24,6 +20,10 @@
            "Bucket": "imagebucket125",
            "Key": "mydockercfg"
          },
+		    "links": [
+			    "postgres",
+				"db"
+			],
 			"essential": true,
 			"name": "api",
 			"image": "navrang125/infra-engineer-task_api:latest",
