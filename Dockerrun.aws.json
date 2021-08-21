@@ -1,5 +1,5 @@
 {
-	"AWSEBDockerrunVersion": 2,
+	"AWSEBDockerrunVersion": 3,
 	"containerDefinitions": [{
 		    "environment": [{
 				"name": "POSTGRES_PASSWORD",
@@ -20,6 +20,10 @@
 			
 		},
 		{
+		   " Authentication": {
+           "Bucket": "imagebucket125",
+           "Key": "mydockercfg"
+         },
 			"essential": true,
 			"name": "api",
 			"image": "navrang125/infra-engineer-task_api:latest",
