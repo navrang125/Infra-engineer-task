@@ -16,10 +16,6 @@
 			
 		},
 		{
-		   " Authentication": {
-           "Bucket": "imagebucket125",
-           "Key": "mydockercfg"
-         },
 		    "links": [
 			    "postgres"				
 			],
