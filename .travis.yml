@@ -4,7 +4,7 @@ services:
     - docker
     
 before_install:
-    - docker build -t infra-engineer-task_api .
+    - docker-compose build
     - docker tag infra-engineer-task_api navrang125/infra-engineer-task_api
    
 after_success:

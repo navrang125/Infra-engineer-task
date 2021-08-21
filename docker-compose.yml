@@ -1,16 +1,17 @@
-version: '2.4'
+version: "3"
+
 services:
   api:
-    image: "navrang125/infra-engineer-task_api:latest"
-    mem_limit: 128m
+    build: ./api
     ports:
       - "5000:9090"
+    depends_on:
+      - postgres
     links:
       - postgres:db
   postgres:
-    image: "postgres:alpine"
+    image: postgres:alpine
     ports:
-      - "5432:5432"
-      mem_limit: 128m
+      - 5432:5432
     environment:
       POSTGRES_PASSWORD: 3x4mpl3
