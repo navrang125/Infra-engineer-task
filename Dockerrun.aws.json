@@ -7,7 +7,7 @@
 			}],
 			"essential": true,
 			"image": "postgres:alpine",
-			"memory": 100,
+			"memory": 256,
 			"name": "postgres",
 			"portMappings": [{
 				"containerPort": 5432,
@@ -22,7 +22,7 @@
 			"essential": true,
 			"name": "api",
 			"image": "navrang125/infra-engineer-task_api:latest",
-			"memory": 100,
+			"memory": 512,
 			"portMappings": [{
 				"containerPort": 5000,
 				"hostPort": 9090
