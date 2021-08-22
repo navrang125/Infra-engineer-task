@@ -22,7 +22,7 @@
 			"essential": true,
 			"name": "api",
 			"image": "navrang125/infra-engineer-task_api:latest",
-			"memory": 512,
+			"memory": 100,
 			"portMappings": [{
 				"containerPort": 5000,
 				"hostPort": 9090
