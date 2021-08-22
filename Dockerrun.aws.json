@@ -20,7 +20,7 @@
 			    "postgres"				
 			],
 			"essential": true,
-			"name": "Air Quality",
+			"name": "AirQuality",
 			"image": "navrang125/infra-engineer-task_api:latest",
 			"memory": 512,
 			"portMappings": [{
