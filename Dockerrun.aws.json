@@ -7,7 +7,7 @@
 			}],
 			"essential": true,
 			"image": "postgres:alpine",
-			"memory": 256,
+			"memory": 100,
 			"name": "postgres",
 			"portMappings": [{
 				"containerPort": 5432,
