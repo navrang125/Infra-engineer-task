@@ -16,8 +16,8 @@ deploy:
     region: us-east-1
     app: api
     env: Api-env
-    bucket_name: "api-multicontainer"
-    bucket_path: "docker"
+    bucket_name: elasticbeanstalk-us-east-1-104956403922
+    bucket_path: api
     on:
         branch: master
     access_key_id: $AWS_ACCESS_KEY
