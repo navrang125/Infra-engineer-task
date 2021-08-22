@@ -14,10 +14,10 @@ after_success:
 deploy:
     provider: elasticbeanstalk
     region: us-east-1
-    app: api
-    env: Api-env
+    app: Air Quality
+    env: Airquality-env
     bucket_name: elasticbeanstalk-us-east-1-104956403922
-    bucket_path: api
+    bucket_path: Air Quality
     on:
         branch: master
     access_key_id: $AWS_ACCESS_KEY
