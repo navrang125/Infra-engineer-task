@@ -24,8 +24,8 @@
 			"image": "navrang125/infra-engineer-task_api:latest",
 			"memory": 512,
 			"portMappings": [{
-				"containerPort": 5000,
-				"hostPort": 9090
+				"containerPort": 9090,
+				"hostPort": 5000
 			}]
 		}
 	]
