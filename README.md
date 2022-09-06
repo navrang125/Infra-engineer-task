@@ -86,3 +86,4 @@ Challenge tips:
 | Resiliency | The lifecycle of nodes is managed using auto-scaling groups, so that if a node enters an unhealthy state for unforeseen reasons, the node is taken out of load balancer rotation and/or replaced automatically and all of its container tasks are rescheduled | If a node is replaced, all of its container tasks are rescheduled automatically |
 | Monitoring | An option could be Elastic Stack (including Metricbeat on each node to ship system stats to Elasticsearch) |  An option could be Elastic Stack (including Metricbeat on each node to ship docker container stats to Elasticsearch) |
 
+Testing done
